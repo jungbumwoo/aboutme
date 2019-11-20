@@ -1,6 +1,7 @@
 /* CSS Reset */
 body, h1, p, ul {
     margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -44,10 +45,11 @@ body {
     line-height: 1;
 }
 
+
 .name-adj {
-    display: inline;
+    display: inline-block;
     background-color: khaki;
-    vertical-align: top;
+
 }
 
 .name-title {
