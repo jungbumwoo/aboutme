@@ -66,7 +66,7 @@ body {
     font-size: 30px;
     line-height: 1.3;
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-family: 'Calistoga', cursive;
 }
 
@@ -93,7 +93,7 @@ body {
 
 .name-adj-list {
     animation-name: rolling;
-    animation-duration: 7s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     padding-left: 0.4em;
     color: white;
@@ -111,4 +111,51 @@ body {
 span {
     
 }
+
+.icons {
+    margin-top: 20px;
+}
+/***
+.icons a {
+    background-image: url(images/icon.png);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;  } ***/
+
+
+
+.icons a.facebook {
+    background-image: url(images/icons.png);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position: center top;
+
+}
+.icons a.instagram {
+    background-image: url(images/instalogo.png  );
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position: center;
+
+}
+
+.icons a.instagram:hover {
+    background-image: url(images/instahover.png  );
+}
+.icons a.facebook:hover {
+    background-image: url(images/123.png);
+    background-position: center;
+}
+
+
+
+
+
+
+
 
