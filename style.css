@@ -21,12 +21,12 @@
 }
 
 /* CSS Reset */
-body, h1, p, ul {
+body, h1, h2, h3, p, u, dl, dd {
     margin: 0;
     padding: 0;
 }
 
-h1 {
+h1, h2, h3 {
     font-size: 100%;
     font-weight: normal;
 }
@@ -56,10 +56,22 @@ body {
 
 .profile {
     padding: 7%;
+    min-height: 5000px;
 }
 
 .profile-header, .profile-section {
-    padding-bottom: 7%;
+    padding-bottom: 14%;
+}
+
+.profile-section h2 {
+    border-top: 4px solid;
+    color: plum;
+    margin-bottom: 20px;
+    padding: 0.5em 0;
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    box-shadow: 0 0 50px 10px #111;
 }
 
 .name {
@@ -68,6 +80,11 @@ body {
     font-style: italic;
     margin-bottom: 40px;
     font-family: 'Calistoga', cursive;
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    box-shadow: 0 0 50px 10px #111;
+
 }
 
 
@@ -105,6 +122,7 @@ body {
     color: khaki;
     line-height: 1.5;
     margin-left: -0.3em;
+    position: relative;
     
 }
 
@@ -113,7 +131,7 @@ span {
 }
 
 .icons {
-    margin-top: 20px;
+    margin: 30px 0;
 }
 /***
 .icons a {
@@ -152,10 +170,93 @@ span {
     background-position: center;
 }
 
+.timeline {
+    font-size: 0.9rem;
+    margin-top: 2em;
+    color: #777
+}
 
+.timeline li {
+    
+    padding-bottom: 30px;
+    
+}
 
+.timeline li:last-child {
+    padding-bottom: 0;
+}
 
+.timeline li h3 {
+    color: plum;
+    font-size: 1rem;
+    border-top: 2px solid;
+    padding-top: 0.2em;
+    display: inline;
+    letter-spacing: 0.1em;
+    
+}
 
+.graph li {
+    background: rgb(232,203,48);
+    background: linear-gradient(90deg, rgba(232,203,48,1) 48%, rgba(255,153,19,1) 100%);
+    color: #111;
+    padding: 0.5em 1em;
+    margin: 0.4em 0;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
 
+.graph li::before {
+    content: attr(data-score);
+    float: right; 
+}
 
+.graph li[data-score="100%"] { width: 100%; }
+.graph li[data-score="90%"] { width: 90%; }
+.graph li[data-score="80%"] { width: 80%; }
+.graph li[data-score="50%"] { width: 50%; }
+.graph li[data-score="40%"] { width: 40%; }
 
+.contactlist dt {
+    color: plum;
+    float: left;
+    width: 4em;
+}
+
+.list dd {
+    overflow: hidden;
+}
+
+@media ( min-width: 768px ) {
+    .portrait {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 56vw;
+        height: 100vh;
+        padding: 0;
+    }
+    .profile {
+        margin-left: 56vw;
+    }
+    .name {
+        font-size: 3vw;
+    }
+    .timeline{
+        margin: 0 -40px;
+    }
+    .timeline li {
+        width: 50%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .timeline li:nth-child(even) {
+        margin-left: auto;
+        margin-top: -150px;
+        margin-bottom: -150px;
+    }
+    
+    .profile-section h2:first-child {
+        margin-right: -40px;
+    }
+}

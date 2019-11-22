@@ -10,5 +10,12 @@
 - box-sizing
 - Media Queries
 
-<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+강의 1:25:28 부분, 쓰는 이유.
+
+.list dd {
+    overflow: hidden;
+} 
+
+강의 1:43:47, box-sizing 부분
+
 
