@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 
 /*Write board page */
 router.get('/write', function(req, res, next) {
-  res.render('write', {title: '글쓰기'});
+  res.render('write', {title: '작성해'});
 });
 
 /*board insert mongo */
