@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -31,6 +31,20 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
+//mongodb setup
+var mongoose = require('mongoose');
+var primise = mongoose.connect('mongodb://localhost/mydb', {
+  useMongoClient: true
+});
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function(){
+  console.log('connected successfully');
+});
+
 
 // error handler
 app.use(function(err, req, res, next) {
