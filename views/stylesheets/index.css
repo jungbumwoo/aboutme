@@ -1,0 +1,44 @@
+body, ul, li, a, span {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.above-ul {
+    float: right;
+}
+
+.above-ul li {
+    display: inline-block;
+    margin: 1rem 1rem;
+}
+
+.wrapper {
+    background-image: url(../../images/profile_bum.JPG);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.above {
+    height: 500px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Calistoga', cursive;
+
+}
+.title {
+    font-size: 2rem;
+    margin: 1rem 1rem;
+    
+
+}

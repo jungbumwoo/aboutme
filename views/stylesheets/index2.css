@@ -1,0 +1,264 @@
+/* Animation */
+@keyframes rolling {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-16%);
+    }
+    40% {
+        transform: translateY(-33%);
+    }
+    60% {
+        transform: translateY(-50%);
+    }
+    80% {
+        transform: translateY(-66%);
+    }
+    100% {
+        transform: translateY(-83%);
+    }
+}
+
+
+/* CSS Reset */
+body, h1, h2, h3, p, u, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+body {
+    background-color: #111;
+    color: #999;
+}
+
+.portrait {
+    background-image: url(../images/profile_bum.JPG);
+    background-size: cover;
+    background-position: center;
+    padding-top: 56.25% /* 16:9 */
+}
+
+.profile {
+    padding: 7%;
+    min-height: 5000px;
+}
+
+.profile-header, .profile-section {
+    padding-bottom: 14%;
+}
+
+.profile-section h2 {
+    border-top: 4px solid;
+    color: plum;
+    margin-bottom: 20px;
+    padding: 0.5em 0;
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    box-shadow: 0 0 50px 10px #111;
+}
+
+.name {
+    font-size: 30px;
+    line-height: 1.3;
+    font-style: italic;
+    margin-bottom: 40px;
+    font-family: 'Calistoga', cursive;
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    box-shadow: 0 0 50px 10px #111;
+
+}
+
+
+.name-adj {
+    display: inline-block;
+    vertical-align: top;
+    height: 1.3em;
+    overflow: hidden;
+    padding-right: 0.5em;
+    position: relative;
+}
+
+.name-adj::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: -1em;
+    box-shadow: inset 0 0 5px 4px #111;
+}
+
+.name-adj-list {
+    animation-name: rolling;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    padding-left: 0.4em;
+    color: white;
+  
+}
+
+.name-title {
+    font-size: 1.8em;
+    color: khaki;
+    line-height: 1.5;
+    margin-left: -0.3em;
+    position: relative;
+    
+}
+
+span {
+    
+}
+
+.icons {
+    margin: 30px 0;
+}
+/***
+.icons a {
+    background-image: url(images/icon.png);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;  } ***/
+
+
+
+.icons a.facebook {
+    background-image: url(../images/icons.png);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position: center top;
+
+}
+.icons a.instagram {
+    background-image: url(../images/instalogo.png  );
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position: center;
+
+}
+
+.icons a.instagram:hover {
+    background-image: url(../images/instahover.png  );
+}
+.icons a.facebook:hover {
+    background-image: url(../images/123.png);
+    background-position: center;
+}
+
+.timeline {
+    font-size: 0.9rem;
+    margin-top: 2em;
+    color: #777
+}
+
+.timeline li {
+    
+    padding-bottom: 30px;
+    
+}
+
+.timeline li:last-child {
+    padding-bottom: 0;
+}
+
+.timeline li h3 {
+    color: plum;
+    font-size: 1rem;
+    border-top: 2px solid;
+    padding-top: 0.2em;
+    display: inline;
+    letter-spacing: 0.1em;
+    
+}
+
+.graph li {
+    background: rgb(232,203,48);
+    background: linear-gradient(90deg, rgba(232,203,48,1) 48%, rgba(255,153,19,1) 100%);
+    color: #111;
+    padding: 0.5em 1em;
+    margin: 0.4em 0;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.graph li::before {
+    content: attr(data-score);
+    float: right; 
+}
+
+.graph li[data-score="100%"] { width: 100%; }
+.graph li[data-score="90%"] { width: 90%; }
+.graph li[data-score="80%"] { width: 80%; }
+.graph li[data-score="50%"] { width: 50%; }
+.graph li[data-score="40%"] { width: 40%; }
+
+.contactlist dt {
+    color: plum;
+    float: left;
+    width: 4em;
+}
+
+.list dd {
+    overflow: hidden;
+}
+
+@media ( min-width: 768px ) {
+    .portrait {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 56vw;
+        height: 100vh;
+        padding: 0;
+    }
+    .profile {
+        margin-left: 56vw;
+    }
+    .name {
+        font-size: 3vw;
+    }
+    .timeline{
+        margin: 0 -40px;
+    }
+    .timeline li {
+        width: 50%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .timeline li:nth-child(even) {
+        margin-left: auto;
+        margin-top: -150px;
+        margin-bottom: -150px;
+    }
+    
+    .profile-section h2:first-child {
+        margin-right: -40px;
+    }
+}
+
