@@ -9,22 +9,30 @@ li {
 
 a {
     text-decoration: none;
-    color: black;
 }
 
 .above-ul {
     float: right;
+
 }
 
 .above-ul li {
     display: inline-block;
     margin: 1rem 1rem;
+
+}
+
+.above-ul li a {
+    color: white;
+
+
 }
 
 .wrapper {
-    background-image: url(../../images/profile_bum.JPG);
+    background-image: url(../images/profile_bum.JPG);
     background-size: cover;
     background-position: center;
+    
 
 }
 
@@ -32,13 +40,16 @@ a {
     height: 500px;
     width: 1200px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
     font-family: 'Calistoga', cursive;
+    text-shadow: black 0.1em 0.1em 0.2em;
 
 }
 .title {
     font-size: 2rem;
     margin: 1rem 1rem;
+    color: white; 
+    
     
 
 }
