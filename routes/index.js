@@ -52,7 +52,7 @@ router.post('/comment/write', function(req, res){
       res.redirect('/');
 
     }
-    res.redirect('/board'+req.body.id);
+    res.redirect('/board/'+req.body.id);
   });
 });
 
