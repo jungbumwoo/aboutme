@@ -35,7 +35,7 @@ app.use(function(req, res, next) {
 
 //mongodb setup
 var mongoose = require('mongoose');
-var primise = mongoose.connect('mongodb://bumbum:!bpou0422!@ds253368.mlab.com:53368/heroku_256qn0hf', {
+var primise = mongoose.connect('mongodb://localhost/mydb', {
   useMongoClient: true
 });
 

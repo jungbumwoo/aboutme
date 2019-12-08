@@ -9,6 +9,7 @@ var commentSchema = new Schema({
 
 var boardSchema = new Schema({
     title: String,
+    subtitle: String,
     contents: String,
     author: String,
     board_date: {type: Date, default: Date.now()},
