@@ -1,4 +1,4 @@
-body, ul, li, a, span, nav, h3, h5, h6 {
+body, ul, li, a, span, nav, h2, h5, h6 {
     margin: 0;
     padding: 0;
 }
@@ -52,10 +52,10 @@ a {
 }
 
 .catagory{
+    display: block;
     float: left;
     height: 1000px;
-    width: 300px;
-    border: 1px solid blue;
+    width: 18%;
 
 }
 
@@ -73,15 +73,36 @@ a {
 }
 
 .catagory-nav ul li a:hover {
-    background-color: #555;
+    background-color: #3399ff;
     color: white;
 }
 
-.content-a {
+.content {
+    float: left;
+    width: 65%;
     color: black;
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 0.05rem solid #3399ff;
+}
+
+.subtitle .board_date {
+    color:rebeccapurple;
 }
 
 .content:hover {
-    background-color: #555;
+    background-color: #3399ff;
     color: white ;
 }
+
+.content-a {
+    color: inherit;
+    
+}
+
+.content-a h2, h6 {
+    margin: 1rem 0;
+}
+
+
+
