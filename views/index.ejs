@@ -18,18 +18,27 @@
       </div>
     </div>
     <div class="catagory">
-        <ul>
-            <li>About Me</li>
-            <li>창업일기</li>
-            <li>끄적끄적</li>
-            <li>여행</li>
-        </ul>
+        <nav class="catagory-nav">
+          <ul>
+            <li><a href="">About Me</a></li>
+            <li><a href="">창업</a></li>
+            <li><a href="">끄적끄적</a></li>
+            <li><a href="">여행</a></li>
+          </ul>
+        </nav>
     </div>
-    <p>Welcome to <%= title %></p>
-    <a href="write">글쓰기</a><br>
+    
     <% if (board !== null){
         for(var i = 0; i < board.length; i++) { %>
-            <a href="/board/<%= board[i]._id%>"><h3><%= i+1 %> - <%=board[i].title%></h3></a>
+            <div class="content">
+              <a class= "content-a" href="/board/<%= board[i]._id%>">
+                <h3><%= i+1 %> - <%=board[i].title%></h3>
+                <h5><%=board[i].subtitle%></h5>
+                <h6><%= board[i].board_date%></h6>
+              </a>
+              
+            </div>
     <%  }} %>
+    <a href="write">글쓰기</a><br>
   </body>
 </html>

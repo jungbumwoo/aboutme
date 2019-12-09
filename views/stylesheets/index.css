@@ -1,4 +1,4 @@
-body, ul, li, a, span {
+body, ul, li, a, span, nav, h3, h5, h6 {
     margin: 0;
     padding: 0;
 }
@@ -19,6 +19,7 @@ a {
 .above-ul li {
     display: inline-block;
     margin: 1rem 1rem;
+
 
 }
 
@@ -43,13 +44,44 @@ a {
     margin-right: auto; 
     font-family: 'Calistoga', cursive;
     text-shadow: black 0.1em 0.1em 0.2em;
-
 }
 .title {
     font-size: 2rem;
     margin: 1rem 1rem;
     color: white; 
-    
-    
+}
 
+.catagory{
+    float: left;
+    height: 1000px;
+    width: 300px;
+    border: 1px solid blue;
+
+}
+
+.catagory-nav {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.catagory-nav ul li {
+    margin: 1rem 0px;   
+}
+
+.catagory-nav ul li a {
+    color: black;
+}
+
+.catagory-nav ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.content-a {
+    color: black;
+}
+
+.content:hover {
+    background-color: #555;
+    color: white ;
 }

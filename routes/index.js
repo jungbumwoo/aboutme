@@ -24,6 +24,7 @@ router.post('/board/write', function (req, res) {
   board.title = req.body.title;
   board.subtitle = req.body.subtitle;
   board.contents = req.body.author;
+  board.board_date = req.body.board_date;
 
   board.save(function (err) {
     if (err) {
