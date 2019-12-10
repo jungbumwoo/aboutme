@@ -85,14 +85,13 @@ a {
     border-bottom: 0.05rem solid #3399ff;
 }
 
+.content {
+    color:black;
+}
+
 .content-a {
-    color: black;    
+    color: inherit;
 }
-
-.subtitle .board_date {
-    color: red;
-}
-
 
 .content:hover {
     background-color: #3399ff;
