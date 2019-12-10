@@ -76,34 +76,3 @@ a {
     background-color: #3399ff;
     color: white;
 }
-
-.content {
-    float: left;
-    width: 65%;
-    text-align: center;
-    padding: 2rem 0;
-    border-bottom: 0.05rem solid #3399ff;
-}
-
-.content-a {
-    color: black;    
-}
-
-.subtitle .board_date {
-    color: red;
-}
-
-
-.content:hover {
-    background-color: #3399ff;
-    color: white ;
-}
-
-
-
-.content-a h2, h6 {
-    margin: 1rem 0;
-}
-
-
-

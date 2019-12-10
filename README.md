@@ -10,6 +10,7 @@
 - box-sizing
 - Media Queries
 
+<<<<<<< Updated upstream
 강의 1:25:28 부분, 쓰는 이유.
 
 .list dd {
@@ -19,3 +20,5 @@
 강의 1:43:47, box-sizing 부분
 
 
+=======
+>>>>>>> Stashed changes

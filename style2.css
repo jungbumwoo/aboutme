@@ -1,0 +1,26 @@
+.float-frame {
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow: hidden;
+    
+}
+
+.big-area{
+    background-color: slategrey;
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    margin: 10px 10px;
+    float: left;
+}
+
+.small-unit {
+    background-color: #111;
+    color: white;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 2px 2px;
+
+}
