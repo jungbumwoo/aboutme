@@ -76,3 +76,19 @@ a {
     background-color: #3399ff;
     color: white;
 }
+
+
+/* write 개별 */
+
+#title {
+    width: 10rem;
+}
+
+#subtitle {
+    width: 10rem;
+}
+
+#contents {
+    width:30%;
+    height: 30rem;
+}
