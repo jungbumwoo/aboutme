@@ -54,9 +54,8 @@
         <div class="form">
           <form action="/comment/write" method="post">
             <input type="text" name="id" value="<%=board._id%>" hidden>
-            댓글 : <textarea name="contents"></textarea><br>
-            글쓴이 : <input type="text" name="author"><br>
-            <input type="submit" value="확인">
+              <textarea id="textarea" name="contents"></textarea><br>
+            <input id="submit" type="submit" value="댓글남기기">
           </form>
         </div>
       </div>

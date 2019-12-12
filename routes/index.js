@@ -28,7 +28,6 @@ router.post('/board/write', function (req, res) {
   board.subtitle = req.body.subtitle;
   board.contents = req.body.contents;
   board.board_date = req.body.board_date;
-  console.log(board.contents);
 
   board.save(function (err) {
     if (err) {
@@ -51,12 +50,10 @@ router.post('/comment/write', function(req, res){
   var comment = new Comment();
   comment.contents = req.body.contents;
   
+  
   var adjrandom = adjlist[Math.floor(Math.random() * adjlist.length)];
   var nounrandom = nounlist[Math.floor(Math.random() * nounlist.length)];
   comment.author = `${adjrandom} ${nounrandom}`;
-  console.log(adjrandom);
-  console.log(nounrandom);
-  console.log(comment.author);
 
   Board.findOneAndUpdate({_id : req.body.id}, { $push: {  comments: comment}}, function (err, board) {
     if(err){
