@@ -111,5 +111,6 @@ a {
 }
 
 #author #comment {
-    margin: 1rem 0;
+    line-height: 1.4rem;
+    color: red;
 }
