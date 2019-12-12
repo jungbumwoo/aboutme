@@ -3,8 +3,8 @@ var router = express.Router();
 
 var Board = require('../models/board');
 var Comment = require('../models/comment');
-import adjlist from "../list";
-import nounlist from "../list";
+import { adjlist } from "../list";
+import { nounlist } from "../list";
 
 
 
@@ -53,7 +53,7 @@ router.post('/comment/write', function(req, res){
   
   var adjrandom = adjlist[Math.floor(Math.random() * adjlist.length)];
   var nounrandom = nounlist[Math.floor(Math.random() * nounlist.length)];
-  comment.author = adjrandom + nounrandom;
+  comment.author = `${adjrandom} ${nounrandom}`;
   console.log(adjrandom);
   console.log(nounrandom);
   console.log(comment.author);

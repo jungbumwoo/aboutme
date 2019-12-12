@@ -1,4 +1,4 @@
-body, ul, li, a, span, nav, h1, h2, h4, h5, h6 {
+body, ul, li, a, span, nav, h1, h2, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -102,3 +102,14 @@ a {
     margin-top: 5rem;
     margin-bottom: 3rem;
  }
+
+
+ /* board 개별*/
+ 
+.comment-content{
+    background-color: olive;
+}
+
+#author #comment {
+    margin: 1rem 0;
+}

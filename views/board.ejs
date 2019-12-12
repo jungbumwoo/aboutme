@@ -40,20 +40,26 @@
         </div>
       </div>
       
-      <hr>
-      <% if (board.comments !== null) {
-          var comment = board.comments;
-            for(var i = 0; i < board.comments.length; i++) {%>
-      <h4>작성자 : <%=comment[i].author%></h4>
-      <h4>내용 : <%=comment[i].contents%></h4>
-      <hr>
-      <%}}%>
-      <form action="/comment/write" method="post">
-        <input type="text" name="id" value="<%=board._id%>" hidden>
-        댓글 : <textarea name="contents"></textarea><br>
-        글쓴이 : <input type="text" name="author"><br>
-        <input type="submit" value="확인">
-      </form>
+      <div class="comment">
+        <div class="comment-content">
+          <hr>
+          <% if (board.comments !== null) {
+              var comment = board.comments;
+                for(var i = 0; i < board.comments.length; i++) {%>
+                  <p id="author"><%=comment[i].author%></p>
+                  <p id="comment"><%=comment[i].contents%></p>
+          <hr>
+          <%}}%>
+        </div>
+        <div class="form">
+          <form action="/comment/write" method="post">
+            <input type="text" name="id" value="<%=board._id%>" hidden>
+            댓글 : <textarea name="contents"></textarea><br>
+            글쓴이 : <input type="text" name="author"><br>
+            <input type="submit" value="확인">
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
