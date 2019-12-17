@@ -12,6 +12,7 @@ var boardSchema = new Schema({
     subtitle: String,
     contents: String,
     author: String,
+    fileUrl: String,
     board_date: {type: Date, default: Date.now()},
     comments: [commentSchema]
 })
