@@ -1,5 +1,5 @@
 module.exports = {
-	server_port: 8081,
+	server_port: 3000,
 	db_url: 'mongodb://bumbum:!bpou0422!@ds253368.mlab.com:53368/heroku_256qn0hf',
 	db_schemas: [
         {file:'./user_schema', collection:'users6', schemaName:'UserSchema', modelName:'UserModel'}

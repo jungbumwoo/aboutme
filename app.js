@@ -36,7 +36,8 @@ app.use(function(req, res, next) {
 //mongodb setup
 var mongoose = require('mongoose');
 var primise = mongoose.connect( 'mongodb+srv://jungbumwoo:!wjdqja12@cluster0-enwjy.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true }, { useUnifiedTopology: true }, {
-  useMongoClient: true
+  useMongoClient: true,
+  useUnifiedTopology: true
 });
 
 var db = mongoose.connection;
