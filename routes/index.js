@@ -20,6 +20,18 @@ router.get('/write', function(req, res, next) {
   res.render('write', {title: '작성해'});
 });
 
+router.get('/catagory2', function(req, res, next) {
+  Board.find({}, function (err, board) {
+    res.render('catagory2', {title: 'catagory2', board: board});
+  });
+});
+
+router.get('/catagory3', function(req, res, next) {
+  Board.find({}, function (err, board) {
+    res.render('catagory3', {title: 'catagory3', board: board});
+  });
+});
+
 /*board insert mongo */
 
 router.post('/board/write', function (req, res) {

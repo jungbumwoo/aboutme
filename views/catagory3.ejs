@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='stylesheets/index.css' />
+    <link rel='stylesheet' href='stylesheets/catagory3.css' />
   </head>
   <body>   
     <div class="wrapper">
@@ -10,7 +9,7 @@
         <span><a class="title" href="/">Bumlog</a></span>
           <ul class="above-ul">
                 <li><a href="/">Home</a></li>
-                <li><a href="/">About</a></li>
+                <li><a href="index.html">About</a></li>
                 <li><a href="">Posts</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href="">Blabla</a></li>
@@ -21,13 +20,12 @@
         <nav class="catagory-nav">
           <ul>
             <li><a href="">About Me</a></li>
-            <li><a href="catagory2">창업</a></li>
-            <li><a href="catagory3">끄적끄적</a></li>
+            <li><a href="">창업</a></li>
+            <li><a href="">끄적끄적</a></li>
             <li><a href="">여행</a></li>
           </ul>
         </nav>
     </div>
-    
     <% if (board !== null){
         for(var i = 0; i < board.length; i++) { %>
             <div class="content">
@@ -39,6 +37,7 @@
               
             </div>
     <%  }} %>
+    
     <a href="write">글쓰기</a><br>
   </body>
 </html>

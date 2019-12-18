@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='stylesheets/catagory2.css' />
+  </head>
+  <body>   
+    <div class="wrapper">
+      <div class="above">        
+        <span><a class="title" href="/">Bumlog</a></span>
+          <ul class="above-ul">
+                <li><a href="/">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="">Posts</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Blabla</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="catagory">
+        <nav class="catagory-nav">
+          <ul>
+            <li><a href="">About Me</a></li>
+            <li><a href="">창업</a></li>
+            <li><a href="">끄적끄적</a></li>
+            <li><a href="">여행</a></li>
+          </ul>
+        </nav>
+    </div>
+    <% if (board !== null){
+        for(var i = 0; i < board.length; i++) {
+            if (board[i].boardcatagory == 2) {
+                %>
+                    <div class="content">
+                    <a class= "content-a" href="/board/<%= board[i]._id%>">
+                        <h2><%=board[i].title%></h2>
+                        <h5 id="subtitle"><%=board[i].subtitle%></h5>
+                        <h6 id="board_date"><%= board[i].board_date%></h6>
+                    </a>
+                    
+                    </div>
+                <%
+            }            
+        }} %>
+    
+    <a href="write">글쓰기</a><br>
+  </body>
+</html>
