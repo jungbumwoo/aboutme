@@ -139,3 +139,12 @@ a {
     margin-top: -1.6rem;
     padding: 1.1rem 0;
 }
+
+#author {
+    float: left;
+    
+}
+
+#comment-date {
+    font-size: 0.7rem;    
+}

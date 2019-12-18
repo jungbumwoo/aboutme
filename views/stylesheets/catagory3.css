@@ -1,0 +1,107 @@
+body, ul, li, a, span, nav, h2, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.above-ul {
+    float: right;
+
+}
+
+.above-ul li {
+    display: inline-block;
+    margin: 1rem 1rem;
+
+
+}
+
+.above-ul li a {
+    color: white;
+
+
+}
+
+.wrapper {
+    background-image: url(../images/profile_bum.JPG);
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.above {
+    height: 500px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto; 
+    font-family: 'Calistoga', cursive;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+.title {
+    font-size: 2rem;
+    margin: 1rem 1rem;
+    color: white; 
+}
+
+.catagory{
+    display: block;
+    float: left;
+    height: 1000px;
+    width: 18%;
+
+}
+
+.catagory-nav {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.catagory-nav ul li {
+    margin: 1rem 0px;   
+}
+
+.catagory-nav ul li a {
+    color: black;
+}
+
+.catagory-nav ul li a:hover {
+    background-color: #3399ff;
+    color: white;
+}
+
+.content {
+    float: left;
+    width: 65%;
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 0.05rem solid #3399ff;
+}
+
+.content {
+    color:black;
+}
+
+.content-a {
+    color: inherit;
+}
+
+.content:hover {
+    background-color: #3399ff;
+    color: white ;
+}
+
+
+
+.content-a h2, h6 {
+    margin: 1rem 0;
+}
+
+
