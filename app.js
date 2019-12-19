@@ -9,6 +9,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+var path = require("path");
+var fs = require("fs");
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
@@ -56,5 +60,64 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+const hljs = require("highlight.js");
+
+const md = require("markdown-it")({
+  html: false,
+  xhtmlOut: false,
+  breaks: false,
+  langPrefix: "language-",
+  linkify: true,
+  typographer: true,
+  quotes: "“”‘’",
+  highlight: function(str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return (
+          '<pre class="hljs"><code>' +
+          hljs.highlight(lang, str, true).value +
+          "</code></pre>"
+        );
+      } catch (__) {}
+    }
+
+    return (
+      '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + "</code></pre>"
+    );
+  }
+});
+
+const directoryPath = path.join(__dirname, "mdfiles");
+console.log(directoryPath);
+
+const viewFiles = fs.readdirSync(directoryPath);
+console.log(viewFiles);
+console.log(viewFiles[0]);
+console.log(viewFiles[1]);
+
+const contents = () => {
+  for(var i = 0; i < viewFiles.length; i++) {
+    const filename = viewFiles[i]; 
+    const mdbody = fs.readFileSync(`./mdfiles/${filename}`, "utf8")
+    const mdconvertedBody = md.render(mdbody);
+  }
+};
+contents();
+
+viewFiles.map(file => {
+  const body = fs.readFileSync(`./mdfiles/${file}`, "utf8")
+  const convertedBody = md.render(body);  
+})
+
+export const mdtohtml = (i) => {
+  const filename = viewFiles[i];
+  console.log(filename);
+  const bodymd = fs.readFileSync(`./mdfiles/${filename}`, "utf8");
+  const md_to_html = md.render(bodymd);
+  console.log(md_to_html);
+}
+
+mdtohtml(0);
 
 module.exports = app;

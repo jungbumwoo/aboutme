@@ -5,6 +5,7 @@ var Board = require('../models/board');
 var Comment = require('../models/comment');
 import { adjlist } from "../list";
 import { nounlist } from "../list";
+import { mdtohtml } from "../app";
 
 
 
@@ -53,7 +54,7 @@ router.post('/board/write', function (req, res) {
 /*board find by id */
 router.get('/board/:id', function( req, res) {
   Board.findOne({_id: req.params.id}, function(err, board) {
-    res.render('board', {title: 'Board', board: board})
+    res.render('board', {title: 'Board', board: board, mdcontent: mdtohtml(board.contents_id)})
   })
 })
 

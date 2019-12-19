@@ -18,8 +18,9 @@ var commentSchema = new Schema({
 var boardSchema = new Schema({
     title: String,
     subtitle: String,
-    boardcatagory: {type: Number, default: 0},
+    boardcatagory: Number,
     contents: String,
+    contents_id: Number,
     author: String,
     fileUrl: String,        
     board_date: {type: String, default: year + "/" + month +"/" + date},
