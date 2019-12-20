@@ -9,8 +9,13 @@
   <body>
     <div id="foo" class="demo"></div>   
     <div class="wrapper">
+      <div class="head">
+        <div class="navbar"></div>
+        <div class="title"><a href="/">Bumlog</a></div>
+      </div>  
+      <!--
       <div class="above">        
-        <span><a class="title" href="/">Bumlog</a></span>
+        
           <ul class="above-ul">
                 <li><a href="/">Home</a></li>
                 <li><a href="/">About</a></li>
@@ -19,7 +24,9 @@
                 <li><a href="">Blabla</a></li>
           </ul>
       </div>
+      -->
     </div>
+    <!--
     <div class="catagory">
         <nav class="catagory-nav">
           <ul>
@@ -30,7 +37,8 @@
           </ul>
         </nav>
     </div>
-    
+    -->
+
     <% if (board !== null){
         for(var i = 0; i < board.length; i++) { %>
             <div class="content">
@@ -42,6 +50,5 @@
               
             </div>
     <%  }} %>
-    <a href="write">글쓰기</a><br>
   </body>
 </html>

@@ -11,51 +11,43 @@ a {
     text-decoration: none;
 }
 
-.above-ul {
-    float: right;
+/**/
 
-}
-
-.above-ul li {
-    display: inline-block;
-    margin: 1rem 1rem;
-
-
-}
-
-.above-ul li a {
-    color: white;
-
-
-}
 
 .wrapper {
     background-image: url(../images/profile_bum.JPG);
     background-size: cover;
     background-position: center;
+    padding-bottom: 56%;
+}
+
+
+.navbar {
+    float: left;
+    background-image: url(../images/navbar3.png);
+    background-size: cover;
+    width: 100px;
+    height: 71px;
     
-
 }
 
-.above {
-    height: 500px;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto; 
-    font-family: 'Calistoga', cursive;
-    text-shadow: black 0.1em 0.1em 0.2em;
-}
+
 .title {
-    font-size: 2rem;
-    margin: 1rem 1rem;
+
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 90px;
     color: white; 
 }
 
+
+.above {
+    
+    font-family: 'Calistoga', cursive;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
 .catagory{
-    display: block;
-    float: left;
-    height: 1000px;
-    width: 18%;
 
 }
 
@@ -79,7 +71,7 @@ a {
 
 .content {
     float: left;
-    width: 65%;
+    width: 100%;
     text-align: center;
     padding: 2rem 0;
     border-bottom: 0.05rem solid #3399ff;

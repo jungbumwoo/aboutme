@@ -22,4 +22,4 @@ var opts = {
 };
 
 var target = document.getElementById('foo');
-var spinner = new Spinner(opts).spin(target);
+var spinner =new Spinner().spin(target);
