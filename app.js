@@ -12,7 +12,6 @@ var app = express();
 var path = require("path");
 var fs = require("fs");
 
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
@@ -93,8 +92,7 @@ console.log(directoryPath);
 
 const viewFiles = fs.readdirSync(directoryPath);
 console.log(viewFiles);
-console.log(viewFiles[0]);
-console.log(viewFiles[1]);
+
 
 const contents = () => {
   for(var i = 0; i < viewFiles.length; i++) {
@@ -118,6 +116,5 @@ export const mdtohtml = (i) => {
   console.log(md_to_html);
 }
 
-mdtohtml(0);
 
 module.exports = app;

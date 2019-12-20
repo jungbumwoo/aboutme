@@ -12,7 +12,8 @@ import { mdtohtml } from "../app";
 /* GET home page. */
 router.get('/', function(req, res, next) {
   Board.find({}, function (err, board) {
-    res.render('index', { title: 'Express', board: board});
+    let reverseboard = board.reverse();
+    res.render('index', { title: 'Express', board: reverseboard});
   });
 });
 
@@ -54,7 +55,9 @@ router.post('/board/write', function (req, res) {
 /*board find by id */
 router.get('/board/:id', function( req, res) {
   Board.findOne({_id: req.params.id}, function(err, board) {
-    res.render('board', {title: 'Board', board: board, mdcontent: mdtohtml(board.contents_id)})
+    const mdcontent = mdtohtml(board.contents_id);
+    res.render('board', {title: 'Board', board: board, mdcontent: mdcontent})
+    console.log(mdcontent);
   })
 })
 
