@@ -5,26 +5,31 @@
     <link rel='stylesheet' href='stylesheets/index.css' />
     <link href="https://cdn.jsdelivr.net/npm/spin.js@latest/spin.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/spin.js@latest/spin.min.js"></script>
+    <script>
+      function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="foo" class="demo"></div>
     <div class="nav">
-      <a href="">
-        <div class="navbar">
-          <div class="navbar_1"></div>
-          <div class="navbar_2"></div>
-          <div class="navbar_3"></div>
-        </div>
-      </a>
+      
+      <div class="navbar">
+        <div class="navbar_1"></div>
+        <div class="navbar_2"></div>
+        <div class="navbar_3"></div>
+      </div>
+      
       <div class="nav_a">
         <a href="">Bumlog</a>
       </div>
-    </div>    
-    <div class="wrapper"></div>
-      <!--
-    <div class="wrapper">
-      <div class="above">        
-        
+      <div id=myLinks class="above">        
           <ul class="above-ul">
                 <li><a href="/">Home</a></li>
                 <li><a href="/">About</a></li>
@@ -33,6 +38,11 @@
                 <li><a href="">Blabla</a></li>
           </ul>
       </div>
+    </div>    
+    <div class="wrapper"></div>
+      <!--
+    <div class="wrapper">
+      
       -->
     </div>
     <!--
@@ -52,7 +62,7 @@
         for(var i = 0; i < board.length; i++) { %>
             <div class="content">
               <a class= "content-a" href="/board/<%= board[i]._id%>">
-                <h2><%=board[i].title%></h2>
+                <h1><%=board[i].title%></h1>
                 <h5 id="subtitle"><%=board[i].subtitle%></h5>
                 <h6 id="board_date"><%= board[i].board_date%></h6>
               </a>
