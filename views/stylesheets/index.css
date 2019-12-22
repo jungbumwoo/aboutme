@@ -21,22 +21,78 @@ a {
     padding-bottom: 56%;
 }
 
+.nav{
+
+    width: 100%;
+    height: auto;
+    background-color: white;
+    position: sticky; 
+    top: 0; 
+
+    border-bottom: 1px solid #3399ff;
+}
+
+.nav_a {
+    height: 4rem;    
+    margin-top: -2rem;
+    
+}
+
+.nav_a a {
+    line-height: 3.5rem;
+    font-size: 3.2rem;
+    margin-left: 1rem;
+    color: #3399ff;
+}
 
 .navbar {
     float: left;
+    background-color: white;
+    width: 8%;
+    height: 4rem;
+    text-align: center;
+}
+
+.navbar_1 {
+    display: inline-block;
+    margin-top: 0.1rem;
+    content: "";
+    width: 4rem;
+    height: 0.5rem;
+    background-color: #3399ff;
+} 
+.navbar_2 {
+    display: inline-block;
+    margin-top: 0.4rem;
+    content: "";
+    width: 4rem;
+    height: 0.5rem;
+    background-color: #3399ff;
+}
+
+.navbar_3 {
+    display: inline-block;
+    margin-top: 0.4rem;
+    content: "";
+    width: 4rem;
+    height: 0.5rem;
+    background-color: #3399ff;
+}
+
+.navbar_menu {
+
     background-image: url(../images/navbar3.png);
     background-size: cover;
-    width: 100px;
-    height: 71px;
+    width: 120px;
+    padding-top: 30%;
     
 }
 
 
 .title {
-
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 90px;
+    width: 50%;
+    margin-right: 40%;
+    font-size: 3rem;
     color: white; 
 }
 
