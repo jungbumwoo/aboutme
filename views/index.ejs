@@ -2,21 +2,26 @@
 <html>
   <head>
     <title><%= title %></title>
+    <meta name="author" content="Adtile">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel='stylesheet' href='stylesheets/index.css' />
-    <link href="https://cdn.jsdelivr.net/npm/spin.js@latest/spin.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/spin.js@latest/spin.min.js"></script>
-    <script>
-      function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
-    </script>
+    
+
   </head>
   <body>
+    <header>
+      <a href="#home" class="logo" data-scroll>Fixed Nav</a>
+      <nav class="nav-collapse">
+        <ul>
+          <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
+          <li class="menu-item"><a href="#about" data-scroll>About</a></li>
+          <li class="menu-item"><a href="#projects" data-scroll>Projects</a></li>
+          <li class="menu-item"><a href="#blog" data-scroll>Blog</a></li>
+          <li class="menu-item"><a href="http://www.google.com" target="_blank">Google</a></li>
+        </ul>
+      </nav>
+    </header>
     <div id="foo" class="demo"></div>
     <div class="nav">
       
@@ -69,5 +74,9 @@
               
             </div>
     <%  }} %>
+    <script src="../jsfiles/responsive-nav.js"></script>
+    <script src="../jsfiles/fastclick.js"></script>
+    <script src="../jsfiles/scroll.js"></script>
+    <script src="../jsfiles/fixed-resposive-nav.js"></script>
   </body>
 </html>
