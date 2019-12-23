@@ -2,48 +2,35 @@
 <html>
   <head>
     <title><%= title %></title>
-    <meta name="author" content="Adtile">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel='stylesheet' href='stylesheets/index.css' />
-    <script src="https://cdn.jsdelivr.net/npm/spin.js@latest/spin.min.js"></script>
-    
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
   </head>
   <body>
     <header>
-      <a href="#home" class="logo" data-scroll>Fixed Nav</a>
-      <nav class="nav-collapse">
-        <ul>
-          <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
-          <li class="menu-item"><a href="#about" data-scroll>About</a></li>
-          <li class="menu-item"><a href="#projects" data-scroll>Projects</a></li>
-          <li class="menu-item"><a href="#blog" data-scroll>Blog</a></li>
-          <li class="menu-item"><a href="http://www.google.com" target="_blank">Google</a></li>
+      <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">Bumlog</a>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="#" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Products</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">About Us</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Contact Us</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Blog</a>
+            </li>
         </ul>
       </nav>
     </header>
-    <div id="foo" class="demo"></div>
-    <div class="nav">
-      
-      <div class="navbar">
-        <div class="navbar_1"></div>
-        <div class="navbar_2"></div>
-        <div class="navbar_3"></div>
-      </div>
-      
-      <div class="nav_a">
-        <a href="">Bumlog</a>
-      </div>
-      <div id=myLinks class="above">        
-          <ul class="above-ul">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="">Posts</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Blabla</a></li>
-          </ul>
-      </div>
-    </div>    
     <div class="wrapper"></div>
       <!--
     <div class="wrapper">
@@ -74,9 +61,21 @@
               
             </div>
     <%  }} %>
-    <script src="../jsfiles/responsive-nav.js"></script>
-    <script src="../jsfiles/fastclick.js"></script>
-    <script src="../jsfiles/scroll.js"></script>
-    <script src="../jsfiles/fixed-resposive-nav.js"></script>
+
+    <section id="home">
+      <h1>Fixed Nav</h1>
+      <p>The code and examples are hosted on GitHub and can be <a href="https://github.com/adtile/fixed-nav">found from here</a>. Read more about the approach from&nbsp;<a href="http://blog.adtile.me/2014/03/03/responsive-fixed-one-page-navigation/">our&nbsp;blog</a>.</p>
+    </section>
+    <section id="about">
+      <h1>About</h1>
+    </section>
+    <section id="projects">
+      <h1>Projects</h1>
+    </section>
+    <section id="blog">
+      <h1>Blog</h1>
+    </section>
+    
+  <script src="/jsfiles/hamburger.js"></script>
   </body>
 </html>
