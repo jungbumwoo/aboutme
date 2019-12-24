@@ -7,6 +7,7 @@
   </head>
   <body>
     <header>
+      <div class="emptybox"></div>
       <nav class="navbar">
         <span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fas fa-bars"></i>
@@ -75,7 +76,14 @@
     <section id="blog">
       <h1>Blog</h1>
     </section>
+    <%
+      for(var i=1, i<=pagination; i++){
+        %>
+          <a href="/boards?page=<%=i%>" class="next-page"><%=i%></a>
+        <%
+      }  
+    %>
     
-  <script src="/jsfiles/hamburger.js"></script>
+  <script src="hamburger.js"></script>
   </body>
 </html>

@@ -12,6 +12,7 @@ var app = express();
 var path = require("path");
 var fs = require("fs");
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')

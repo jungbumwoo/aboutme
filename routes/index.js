@@ -10,12 +10,43 @@ import { mdtohtml } from "../app";
 
 
 /* GET home page. */
+
+
+/**
+
+router.get('/', function(req, res, next) {
+  var page = req.param('page');
+  if(page == null) {page = 1;}
+
+  var skipSize = (page-1)*10;
+  var limitSize = 10;
+  var pageNum = 1;
+
+  Board.count({deleted:false}, function(err, totalCount) {
+    if (err) throw err;
+
+    pageNum = Math.ceil (totalCount/limitSize);
+    Board.find({deleted:false}).sort({date:-1}).skip(skipSize).limit(limitSize).exec(function(err, pageContents) {
+      if (err) throw err;
+      res.render('index', {title: "Board", contents:pageContents, pagination:pageNum});
+    });
+
+
+  });
+});
+
+*/
+
+/*
 router.get('/', function(req, res, next) {
   Board.find({}, function (err, board) {
     let reverseboard = board.reverse();
     res.render('index', { title: 'Express', board: reverseboard});
   });
 });
+*/
+
+
 
 /*Write board page */
 router.get('/write', function(req, res, next) {
