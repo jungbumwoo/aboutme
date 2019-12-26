@@ -15,19 +15,19 @@
         <a href="#" class="logo">Bumlog</a>
         <ul class="main-nav" id="js-menu">
             <li>
-                <a href="#" class="nav-links">Home</a>
+                <a href="/" class="nav-links">Home</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Products</a>
+                <a href="#" class="nav-links">About Me</a>
             </li>
             <li>
-                <a href="#" class="nav-links">About Us</a>
+                <a href="#" class="nav-links">창업</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Contact Us</a>
+                <a href="#" class="nav-links">끄적끄적</a>
             </li>
             <li>
-                <a href="#" class="nav-links">Blog</a>
+                <a href="#" class="nav-links">여행</a>
             </li>
         </ul>
       </nav>
@@ -63,26 +63,21 @@
             </div>
     <%  }} %>
 
-    <section id="home">
-      <h1>Fixed Nav</h1>
-      <p>The code and examples are hosted on GitHub and can be <a href="https://github.com/adtile/fixed-nav">found from here</a>. Read more about the approach from&nbsp;<a href="http://blog.adtile.me/2014/03/03/responsive-fixed-one-page-navigation/">our&nbsp;blog</a>.</p>
-    </section>
-    <section id="about">
-      <h1>About</h1>
-    </section>
-    <section id="projects">
-      <h1>Projects</h1>
-    </section>
-    <section id="blog">
-      <h1>Blog</h1>
-    </section>
-    <%
-      for(var i=1, i<=pagination; i++){
-        %>
-          <a href="/boards?page=<%=i%>" class="next-page"><%=i%></a>
-        <%
-      }  
-    %>
+    <!-- 페이징 -->
+      <ul class="pagination">
+        <% var offset = 3; %>
+        <% for(i=1;i<=maxPage;i++){ %>
+          <% if(i<=offset || i>maxPage-offset || (i>=page-(offset-1) && i<=page+(offset-1))){ %>
+            <% if(i != page){ %>
+              <li>[<a href="/?page=<%= i %>"> <%= i %> </a>]</li>
+            <% } else { %>
+              <li>[ <b><%= i %></b> ]</li>
+            <% } %>
+          <% } else if(i == offset+1 || i == maxPage-offset){ %>
+              <li>...</li>
+          <% } %>
+        <%}%>
+      </ul>
     
   <script src="hamburger.js"></script>
   </body>

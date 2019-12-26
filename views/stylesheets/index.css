@@ -162,6 +162,18 @@ head {
   display: block;
 }
 
+/* 페이징 */
+.pagination{
+  text-align: center;
+
+}
+.pagination li{
+  display: inline;
+  line-height: 5rem;
+  color: #3399ff;
+  font-size: 1.4rem;
+}
+
 @media screen and (min-width: 768px) {
   .navbar {
       display: flex;
