@@ -13,20 +13,15 @@ a {
 
 .above-ul {
     float: right;
-
 }
 
 .above-ul li {
     display: inline-block;
     margin: 1rem 1rem;
-
-
 }
 
 .above-ul li a {
     color: white;
-
-
 }
 
 .wrapper {
@@ -34,7 +29,6 @@ a {
     background-size: cover;
     background-position: center;
     
-
 }
 
 .above {

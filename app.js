@@ -39,7 +39,7 @@ var primise = mongoose.connect( 'mongodb+srv://jungbumwoo:!wjdqja12@cluster0-gnv
  { useNewUrlParser: true,
   useUnifiedTopology: true });
 
-var db = mongoose.connection;
+export const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function(){
   console.log('connected successfully');

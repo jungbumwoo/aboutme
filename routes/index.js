@@ -6,6 +6,7 @@ var Comment = require('../models/comment');
 import { adjlist } from "../list";
 import { nounlist } from "../list";
 import { mdtohtml } from "../app";
+import { db } from "../app.js";
 
 
 const hljs = require("highlight.js");
