@@ -19,7 +19,7 @@ var boardSchema = new Schema({
     title: String,
     subtitle: String,
     boardcatagory: Number,
-    contents: String,
+    contents: Schema.Types.Mixed,
     contents_id: Number,
     author: String,
     fileUrl: String,        
