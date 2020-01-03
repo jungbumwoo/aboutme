@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/index.css' />
     <link rel='stylesheet' href='/stylesheets/header.css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
@@ -10,53 +9,6 @@
     <header>
       <%- include ('partials/header.ejs') %>
     </header>
-    
-      <!--
-    <div class="wrapper">
-      
-      -->
-    
-    <!--
-    <div class="catagory">
-        <nav class="catagory-nav">
-          <ul>
-            <li><a href="">About Me</a></li>
-            <li><a href="catagory2">창업</a></li>
-            <li><a href="catagory3">끄적끄적</a></li>
-            <li><a href="">여행</a></li>
-          </ul>
-        </nav>
-    </div>
-    -->
-
-    <% if (board !== null){
-        for(var i = 0; i < board.length; i++) { %>
-            <div class="content">
-              <a class= "content-a" href="/board/<%= board[i]._id%>">
-                <h1><%=board[i].title%></h1>
-                <h5 id="subtitle"><%=board[i].subtitle%></h5>
-                <h6 id="board_date"><%= board[i].board_date%></h6>
-              </a>
-              
-            </div>
-    <%  }} %>
-
-    <!-- 페이징 -->
-      <ul class="pagination">
-        <% var offset = 3; %>
-        <% for(i=1;i<=maxPage;i++){ %>
-          <% if(i<=offset || i>maxPage-offset || (i>=page-(offset-1) && i<=page+(offset-1))){ %>
-            <% if(i != page){ %>
-              <li>[<a href="/?page=<%= i %>"> <%= i %> </a>]</li>
-            <% } else { %>
-              <li>[ <b><%= i %></b> ]</li>
-            <% } %>
-          <% } else if(i == offset+1 || i == maxPage-offset){ %>
-              <li>...</li>
-          <% } %>
-        <%}%>
-      </ul>
-    
-  <script src="hamburger.js"></script>
+    <p>1  </p>
   </body>
 </html>

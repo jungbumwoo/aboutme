@@ -1,40 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-var Board = require('../models/board');
+// var Board = require('../models/board');
+import { aboutme_db } from '../app';
 var Comment = require('../models/comment');
 import { adjlist } from "../list";
 import { nounlist } from "../list";
 import { mdtohtml } from "../app";
 import { db } from "../app.js";
 
-
-const hljs = require("highlight.js");
-
-const md = require("markdown-it")({
-  html: false,
-  xhtmlOut: false,
-  breaks: false,
-  langPrefix: "language-",
-  linkify: true,
-  typographer: true,
-  quotes: "“”‘’",
-  highlight: function(str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return (
-          '<pre class="hljs"><code>' +
-          hljs.highlight(lang, str, true).value +
-          "</code></pre>"
-        );
-      } catch (__) {}
-    }
-
-    return (
-      '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + "</code></pre>"
-    );
-  }
-});
 
 /* GET home page. */
 
@@ -67,7 +41,7 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express', board: reverseboard});
   });
 });
- */
+
 router.get('/', function(req, res, next) {
   let page = Math.max(1, req.query.page);
   let limit = 4;
@@ -83,7 +57,14 @@ router.get('/', function(req, res, next) {
     });
   });
 });
+ */
 
+router.get('/', function(req, res, next) {
+  aboutme_db.query('SELECT * FROM aboutme', function (error, results) {
+    console.log(`result is :` + results);
+    res.render('index');
+  });
+});
 
 /*Write board page */
 router.get('/write', function(req, res, next) {
@@ -124,8 +105,6 @@ router.post('/board/write', function (req, res) {
 router.get('/board/:id', function( req, res) {
   Board.findOne({_id: req.params.id}, function(err, board) {
     console.log(board.contents);
-    const convertedBody = md.render(board.contents); // 이 부분을 추가해주세요!
-    console.log(convertedBody);
     res.render('board', {title: 'Board', board: board, markdowncontents: convertedBody})
   });
 });

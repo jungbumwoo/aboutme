@@ -12,6 +12,16 @@ var app = express();
 var path = require("path");
 var fs = require("fs");
 
+import mysql from 'mysql';
+
+// 데이터베이스와 연결합니다.
+export const aboutme_db = mysql.createConnection({
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: 'aboutme'
+});
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,6 +44,7 @@ app.use('/users', usersRouter);
 
 
 //mongodb setup
+/*
 var mongoose = require('mongoose');
 var primise = mongoose.connect( 'mongodb+srv://jungbumwoo:!wjdqja12@cluster0-gnvri.mongodb.net/test?retryWrites=true&w=majority',
  { useNewUrlParser: true,
@@ -44,9 +55,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function(){
   console.log('connected successfully');
 });
-
-
-
 
 const hljs = require("highlight.js");
 
@@ -103,6 +111,8 @@ export const mdtohtml = (i) => {
   const md_to_html = md.render(bodymd);
   console.log(md_to_html);
 }
+
+*/
 
 // error handler
 app.use(function(err, req, res, next) {
