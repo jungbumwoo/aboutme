@@ -60,9 +60,10 @@ router.get('/', function(req, res, next) {
  */
 
 router.get('/', function(req, res, next) {
-  aboutme_db.query('SELECT * FROM aboutme', function (error, results) {
+  aboutme_db.query('select id, title, subtitle, description, boardcatagory, comments from aboutme;', function (error, results) {
+    if(error) console.log('err: '+ error );
     console.log(`result is :` + results);
-    res.render('index');
+    res.render('index', {rows:results} );
   });
 });
 

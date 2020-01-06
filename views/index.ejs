@@ -9,6 +9,26 @@
     <header>
       <%- include ('partials/header.ejs') %>
     </header>
-    <p>1  </p>
+    <%
+    for(var i = 0; i<rows.length; i++)
+    {
+    %>
+    <div class="content">
+      <a class="content-a"href="">
+        <h1><%=rows[i].title%></h1>
+        <h5><%=rows[i].subtitle%></h5>
+        <p><%=rows[i].createdat%></p>
+      </a>
+    </div>
+    <tr>
+      <td><%=rows[i].idx%></td>
+      <td><%=rows[i].title%></td>
+      <td><%=rows[i].subtitle%></td>
+      <td><%=rows[i].description%></td>
+      <td><%=rows[i].board%></td>
+    </tr>
+    <%
+    }
+    %>
   </body>
 </html>

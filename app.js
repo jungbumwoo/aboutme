@@ -16,8 +16,9 @@ import mysql from 'mysql';
 
 // 데이터베이스와 연결합니다.
 export const aboutme_db = mysql.createConnection({
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
+  host: 'localhost',
+  user: 'root',
+  password: '!wjdqja12',
   database: 'aboutme'
 });
 
