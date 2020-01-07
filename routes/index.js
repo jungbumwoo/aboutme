@@ -60,7 +60,7 @@ router.get('/', function(req, res, next) {
  */
 
 router.get('/', function(req, res, next) {
-  aboutme_db.query('select id, title, subtitle, description, boardcatagory, comments from aboutme;', function (error, results) {
+  aboutme_db.query('select id, title, subtitle, description, boardcatagory, comments from bum_table;', function (error, results) {
     if(error) console.log('err: '+ error );
     console.log(`result is :` + results);
     res.render('index', {rows:results} );
@@ -102,11 +102,20 @@ router.post('/board/write', function (req, res) {
   });
 });
 
-/*board find by id */
+/*board find by id 
 router.get('/board/:id', function( req, res) {
   Board.findOne({_id: req.params.id}, function(err, board) {
     console.log(board.contents);
     res.render('board', {title: 'Board', board: board, markdowncontents: convertedBody})
+  });
+});
+*/
+
+router.get('/board/:id', function(req, res, next) {
+  aboutme_db.query('select id, title, subtitle, description, boardcatagory, comments from bum_table;', function (error, results) {
+    if(error) console.log('err: '+ error );
+    console.log(`result is :` + results);
+    res.render('board', {rows:results} );
   });
 });
 

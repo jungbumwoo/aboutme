@@ -11,16 +11,27 @@ var app = express();
 
 var path = require("path");
 var fs = require("fs");
-
+import dotenv from 'dotenv';
 import mysql from 'mysql';
 
+dotenv.config();
 // 데이터베이스와 연결합니다.
+export const aboutme_db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_database
+});
+
+/*
 export const aboutme_db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '!wjdqja12',
   database: 'aboutme'
 });
+*/
+
 
 
 

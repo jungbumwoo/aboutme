@@ -34,3 +34,28 @@
 - 게시물 페이지 나누기
 - 뒤로 가기
 
+
+<!--
+          
+       
+        </div>
+          <div class="comment-content">
+          <hr>
+          <% if (board.comments !== null) {
+              var comment = board.comments;
+                for(var i = 0; i < board.comments.length; i++) {%>
+                  <p id="author"><%=comment[i].author%></p>
+                  <p id="comment-date"><%=comment[i].comment_date%></p>
+                  <p id="comment"><%=comment[i].contents%></p>
+          <hr>
+          <%}}%>
+          </div>
+          <div class="form">
+          <form action="/comment/write" method="post">
+            <input type="text" name="id" value="<%=board._id%>" hidden>
+              <textarea id="textarea" name="contents"></textarea><br>
+            <input id="submit" type="submit" value="댓글남기기">
+          </form>
+        </div>
+        -->
+        

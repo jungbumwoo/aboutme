@@ -14,19 +14,12 @@
     {
     %>
     <div class="content">
-      <a class="content-a"href="">
+      <a class="content-a" href="/board/<%= rows[i].id%>">
         <h1><%=rows[i].title%></h1>
         <h5><%=rows[i].subtitle%></h5>
-        <p><%=rows[i].createdat%></p>
+        <h6><%=rows[i].createdat%></h6>
       </a>
     </div>
-    <tr>
-      <td><%=rows[i].idx%></td>
-      <td><%=rows[i].title%></td>
-      <td><%=rows[i].subtitle%></td>
-      <td><%=rows[i].description%></td>
-      <td><%=rows[i].board%></td>
-    </tr>
     <%
     }
     %>
